@@ -35,6 +35,15 @@ public class Post {
                 comentarios.add(comentario);
     }
 
+    public void verComentarios(){
+        int contagemComent = 1;
+        for (Comentario comentario : comentarios) {
+            System.out.println(contagemComent + " - " + comentario.getTexto());
+            contagemComent ++;
+
+        }
+    }
+
     
 
 
@@ -87,7 +96,7 @@ public class Post {
 
     @Override
     public String toString() {
-        return "Post [teclado=" + teclado + ", momento=" + momento + ", titulo=" + titulo + ", conteudo=" + conteudo
+        return "Post [momento=" + momento + ", titulo=" + titulo + ", conteudo=" + conteudo
                 + ", likes=" + likes + "]";
     }
 

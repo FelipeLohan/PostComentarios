@@ -9,7 +9,9 @@ import java.util.List;
 public abstract class MenuInteracao {
 
     public static void menuInteracao(){
-        
+        List <Post> posts = new ArrayList<>();
+                    int vezesrepetidas = 0;
+
         Scanner teclado = new Scanner(System.in);
         int opcao = 0;
         do{
@@ -21,8 +23,7 @@ public abstract class MenuInteracao {
             System.out.println("5 - Sair");
                 opcao = teclado.nextInt();
                     teclado.nextLine();
-                    List <Post> posts = new ArrayList<>();
-                    int vezesrepetidas = 0;
+                    
             
             switch (opcao) {
                 case 1:
@@ -62,8 +63,9 @@ public abstract class MenuInteracao {
                         numeroDoPost = teclado.nextInt();
                             teclado.nextLine();
                             for (Post p : posts) {
-                                if(numeroDoPost == p.getId())
-                                p.getComentarios();
+                                if(numeroDoPost == p.getId()){
+                                    p.verComentarios();
+                                }
                             }
                     break;
                 case 5:
